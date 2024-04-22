@@ -1,6 +1,48 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/facades/book_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/facades/forecast_facade_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          null,
+          2,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/facades/forecast_facade.rb": {
         "lines": [
           1,
@@ -57,6 +99,37 @@
           null,
           null,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/poros/book_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/poros/book.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          2,
+          2,
+          2,
           null,
           null
         ]
@@ -160,6 +233,92 @@
           1,
           1,
           null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/requests/api/v1/books_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          2,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/services/books_search_service_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/services/books_search_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
           null,
           null
         ]
@@ -298,8 +457,52 @@
           null,
           null
         ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/controllers/api/v1/books_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          2,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/serializers/book_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          5,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1713798047
+    "timestamp": 1713808576
   }
 }
