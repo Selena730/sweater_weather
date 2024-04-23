@@ -21,7 +21,7 @@ RSpec.describe 'Sessions API' do
             expect(json_response['data']['attributes']['email']).to eq('user@example.com')
             api_key = json_response['data']['attributes']['api_key']
             expect(api_key).not_to be_nil
-            # expect(api_key).to match("f9cfb6333f68ff850c90e6b70241ba531c100aab08f7bc398117") Keeps changing 
+            expect(api_key).to be_a(String)
         end
 
         it 'returns nil for invalid' do 
@@ -33,7 +33,7 @@ RSpec.describe 'Sessions API' do
             }
     
             expect(response).to_not be_successful
-            expect(response).to have_http_status(:unauthorized)
+            expect(response).to have_http_status(:bad_request)
 
             json_response = JSON.parse(response.body)
             expect(json_response['data']).to eq(nil)

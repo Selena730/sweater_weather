@@ -1,7 +1,7 @@
 class User < ApplicationRecord
     has_secure_password
     validates :email, presence: true, uniqueness: true
-    before_create :generate_api_key
+    before_create :generate_api_key #callback
 
   private
 

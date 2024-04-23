@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-22T18:33:47-06:00">2024-04-22T18:33:47-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2024-04-23T16:48:22-06:00">2024-04-23T16:48:22-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.89
+         1.88
        </span>
     </span> hits/line
     )
@@ -43,8 +43,8 @@
   </div>
 
   <div class="t-line-summary">
-    <b>194</b> relevant lines,
-    <span class="green"><b>194</b> lines covered</span> and
+    <b>195</b> relevant lines,
+    <span class="green"><b>195</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -84,7 +84,7 @@
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#227cea09c7aed265fd88b5b9551ad31a434133fc" class="src_link" title="app/controllers/api/v0/sessions_controller.rb">app/controllers/api/v0/sessions_controller.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">12</td>
+            <td class="cell--number">13</td>
             <td class="cell--number">6</td>
             <td class="cell--number">6</td>
             <td class="cell--number">0</td>
@@ -239,8 +239,8 @@
             <td class="strong t-file__name"><a href="#a18c377b6c8d84163fbefeb7f61b91a7bdcfc599" class="src_link" title="spec/requests/api/v0/sessions_spec.rb">spec/requests/api/v0/sessions_spec.rb</a></td>
             <td class="green strong cell--number t-file__coverage">100.00 %</td>
             <td class="cell--number">42</td>
-            <td class="cell--number">22</td>
-            <td class="cell--number">22</td>
+            <td class="cell--number">23</td>
+            <td class="cell--number">23</td>
             <td class="cell--number">0</td>
             <td class="cell--number">1.00</td>
             
@@ -442,7 +442,18 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="3">
+          <li class="never" data-hits="" data-linenumber="3">
+            
+            
+
+            
+
+            <code class="ruby">        # binding.pry</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="covered" data-hits="2" data-linenumber="4">
             <span class="hits">2</span>
             
 
@@ -453,7 +464,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="4">
+          <li class="never" data-hits="" data-linenumber="5">
             
             
 
@@ -464,7 +475,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="2" data-linenumber="5">
+          <li class="covered" data-hits="2" data-linenumber="6">
             <span class="hits">2</span>
             
 
@@ -475,7 +486,7 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="6">
+          <li class="covered" data-hits="1" data-linenumber="7">
             <span class="hits">1</span>
             
 
@@ -486,7 +497,7 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="7">
+          <li class="never" data-hits="" data-linenumber="8">
             
             
 
@@ -497,24 +508,13 @@
         </div>
       
         <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
+          <li class="covered" data-hits="1" data-linenumber="9">
             <span class="hits">1</span>
             
 
             
 
-            <code class="ruby">          render json: { errors: [&#39;Invalid email or password&#39;] }, status: :unauthorized</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="9">
-            
-            
-
-            
-
-            <code class="ruby">        end</code>
+            <code class="ruby">          render json: { errors: [&#39;Invalid email or password&#39;] }, status: 400</code>
           </li>
         </div>
       
@@ -525,7 +525,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">        end</code>
           </li>
         </div>
       
@@ -536,12 +536,23 @@
 
             
 
-            <code class="ruby">end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
         <div>
           <li class="never" data-hits="" data-linenumber="12">
+            
+            
+
+            
+
+            <code class="ruby">end</code>
+          </li>
+        </div>
+      
+        <div>
+          <li class="never" data-hits="" data-linenumber="13">
             
             
 
@@ -655,7 +666,7 @@
 
             
 
-            <code class="ruby">            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity</code>
+            <code class="ruby">            render json: { errors: user.errors.full_messages }, status: 400</code>
           </li>
         </div>
       
@@ -1582,7 +1593,7 @@
 
             
 
-            <code class="ruby">    before_create :generate_api_key</code>
+            <code class="ruby">    before_create :generate_api_key #callback</code>
           </li>
         </div>
       
@@ -3866,8 +3877,8 @@
     
 
     <div class="t-line-summary">
-      <b>22</b> relevant lines.
-      <span class="green"><b>22</b> lines covered</span> and
+      <b>23</b> relevant lines.
+      <span class="green"><b>23</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
 
@@ -4132,13 +4143,13 @@
         </div>
       
         <div>
-          <li class="never" data-hits="" data-linenumber="24">
-            
-            
-
+          <li class="covered" data-hits="1" data-linenumber="24">
+            <span class="hits">1</span>
             
 
-            <code class="ruby">            # expect(api_key).to match(&quot;f9cfb6333f68ff850c90e6b70241ba531c100aab08f7bc398117&quot;) Keeps changing </code>
+            
+
+            <code class="ruby">            expect(api_key).to be_a(String)</code>
           </li>
         </div>
       
@@ -4270,7 +4281,7 @@
 
             
 
-            <code class="ruby">            expect(response).to have_http_status(:unauthorized)</code>
+            <code class="ruby">            expect(response).to have_http_status(:bad_request)</code>
           </li>
         </div>
       
@@ -4422,7 +4433,7 @@
 
             
 
-            <code class="ruby">        it &quot;has valid params&quot; do</code>
+            <code class="ruby">    it &quot;has valid params&quot; do</code>
           </li>
         </div>
       
@@ -4433,7 +4444,7 @@
 
             
 
-            <code class="ruby">            expect {</code>
+            <code class="ruby">      expect {</code>
           </li>
         </div>
       
@@ -4444,7 +4455,7 @@
 
             
 
-            <code class="ruby">                post &quot;/api/v0/users&quot;, params: {</code>
+            <code class="ruby">          post &quot;/api/v0/users&quot;, params: {</code>
           </li>
         </div>
       
@@ -4455,7 +4466,7 @@
 
             
 
-            <code class="ruby">                &quot;email&quot;: &quot;user@example.com&quot;,</code>
+            <code class="ruby">          &quot;email&quot;: &quot;user@example.com&quot;,</code>
           </li>
         </div>
       
@@ -4466,7 +4477,7 @@
 
             
 
-            <code class="ruby">                &quot;password&quot;: &quot;password123&quot;,</code>
+            <code class="ruby">          &quot;password&quot;: &quot;password123&quot;,</code>
           </li>
         </div>
       
@@ -4477,7 +4488,7 @@
 
             
 
-            <code class="ruby">                &quot;password_confirmation&quot;: &quot;password123&quot;</code>
+            <code class="ruby">          &quot;password_confirmation&quot;: &quot;password123&quot;</code>
           </li>
         </div>
       
@@ -4488,7 +4499,7 @@
 
             
 
-            <code class="ruby">            }}.to change(User, :count).by(1)</code>
+            <code class="ruby">      }}.to change(User, :count).by(1)</code>
           </li>
         </div>
       
@@ -4510,7 +4521,7 @@
 
             
 
-            <code class="ruby">            expect(response).to be_successful</code>
+            <code class="ruby">      expect(response).to be_successful</code>
           </li>
         </div>
       
@@ -4532,7 +4543,7 @@
 
             
 
-            <code class="ruby">            json = JSON.parse(response.body)</code>
+            <code class="ruby">      json = JSON.parse(response.body)</code>
           </li>
         </div>
       
@@ -4554,7 +4565,7 @@
 
             
 
-            <code class="ruby">            expect(json[&quot;data&quot;][&quot;attributes&quot;][&quot;email&quot;]).to eq(&quot;user@example.com&quot;)</code>
+            <code class="ruby">      expect(json[&quot;data&quot;][&quot;attributes&quot;][&quot;email&quot;]).to eq(&quot;user@example.com&quot;)</code>
           </li>
         </div>
       
@@ -4565,7 +4576,7 @@
 
             
 
-            <code class="ruby">        end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -4587,7 +4598,7 @@
 
             
 
-            <code class="ruby">        it &quot;does not create a new user and returns an error&quot; do</code>
+            <code class="ruby">    it &quot;does not create a new user and returns an error&quot; do</code>
           </li>
         </div>
       
@@ -4598,7 +4609,7 @@
 
             
 
-            <code class="ruby">            expect {</code>
+            <code class="ruby">      expect {</code>
           </li>
         </div>
       
@@ -4609,7 +4620,7 @@
 
             
 
-            <code class="ruby">              post &quot;/api/v0/users&quot;, params: {</code>
+            <code class="ruby">        post &quot;/api/v0/users&quot;, params: {</code>
           </li>
         </div>
       
@@ -4620,7 +4631,7 @@
 
             
 
-            <code class="ruby">                user: {</code>
+            <code class="ruby">          user: {</code>
           </li>
         </div>
       
@@ -4631,7 +4642,7 @@
 
             
 
-            <code class="ruby">                  email: &quot;&quot;, </code>
+            <code class="ruby">            email: &quot;&quot;, </code>
           </li>
         </div>
       
@@ -4642,7 +4653,7 @@
 
             
 
-            <code class="ruby">                  password: &quot;password123&quot;,</code>
+            <code class="ruby">            password: &quot;password123&quot;,</code>
           </li>
         </div>
       
@@ -4653,7 +4664,7 @@
 
             
 
-            <code class="ruby">                  password_confirmation: &quot;password123&quot;</code>
+            <code class="ruby">            password_confirmation: &quot;password123&quot;</code>
           </li>
         </div>
       
@@ -4664,7 +4675,7 @@
 
             
 
-            <code class="ruby">                }</code>
+            <code class="ruby">          }</code>
           </li>
         </div>
       
@@ -4675,7 +4686,7 @@
 
             
 
-            <code class="ruby">              }, as: :json</code>
+            <code class="ruby">        }, as: :json</code>
           </li>
         </div>
       
@@ -4686,7 +4697,7 @@
 
             
 
-            <code class="ruby">            }.not_to change(User, :count)</code>
+            <code class="ruby">      }.not_to change(User, :count)</code>
           </li>
         </div>
       
@@ -4697,7 +4708,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4708,7 +4719,7 @@
 
             
 
-            <code class="ruby">            expect(response).to have_http_status(:unprocessable_entity)</code>
+            <code class="ruby">      expect(response).to have_http_status(:bad_request)</code>
           </li>
         </div>
       
@@ -4719,7 +4730,7 @@
 
             
 
-            <code class="ruby">    </code>
+            <code class="ruby"></code>
           </li>
         </div>
       
@@ -4730,7 +4741,7 @@
 
             
 
-            <code class="ruby">            json = JSON.parse(response.body)</code>
+            <code class="ruby">      json = JSON.parse(response.body)</code>
           </li>
         </div>
       
@@ -4741,7 +4752,7 @@
 
             
 
-            <code class="ruby">            expect(json).to have_key(&#39;errors&#39;)</code>
+            <code class="ruby">      expect(json).to have_key(&#39;errors&#39;)</code>
           </li>
         </div>
       
@@ -4752,7 +4763,7 @@
 
             
 
-            <code class="ruby">            expect(json[&#39;errors&#39;]).to include(&quot;Email can&#39;t be blank&quot;)</code>
+            <code class="ruby">      expect(json[&#39;errors&#39;]).to include(&quot;Email can&#39;t be blank&quot;)</code>
           </li>
         </div>
       
@@ -4763,7 +4774,7 @@
 
             
 
-            <code class="ruby">        end</code>
+            <code class="ruby">    end</code>
           </li>
         </div>
       
@@ -4774,7 +4785,7 @@
 
             
 
-            <code class="ruby">    end</code>
+            <code class="ruby">  end</code>
           </li>
         </div>
       
