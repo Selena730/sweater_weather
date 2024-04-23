@@ -7,3 +7,11 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+require 'securerandom'
+
+def generate_api_key
+    SecureRandom.hex(13)
+end
+
+User.create(email: 'user1@example.com', password: 'password123', password_confirmation: 'password123', api_key: generate_api_key())
+User.create(email: 'user2@example.com', password: 'password123', password_confirmation: 'password123', api_key: generate_api_key())

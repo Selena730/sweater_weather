@@ -9,7 +9,9 @@ Rails.application.routes.draw do
   # root "posts#index"
   namespace :api do
     namespace :v0 do
-      get 'forecast', to: 'forecast#index'
+      resources :forecast, only: [:index]
+      resources :users, only: [:create]
+      resources :sessions, only: [:create]
     end
   end
 end

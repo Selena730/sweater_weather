@@ -61,6 +61,63 @@
           null
         ]
       },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/models/user_spec.rb": {
+        "lines": [
+          null,
+          1,
+          null,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/models/user.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          1,
+          5,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/models/application_record.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/poros/forecast_spec.rb": {
         "lines": [
           1,
@@ -157,6 +214,94 @@
           1,
           1,
           null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/requests/api/v0/sessions_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/spec/requests/api/v0/users_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
+          null,
+          1,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          null,
+          1,
           1,
           1,
           null,
@@ -298,8 +443,54 @@
           null,
           null
         ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/controllers/api/v0/sessions_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          null,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/serializers/user_serializer.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          null
+        ]
+      },
+      "/Users/selenahawamdeh/Desktop/mod3/sweater_weather/app/controllers/api/v0/users_controller.rb": {
+        "lines": [
+          1,
+          1,
+          2,
+          2,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          1,
+          1,
+          2,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1713798047
+    "timestamp": 1713832427
   }
 }
