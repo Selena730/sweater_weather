@@ -4,6 +4,7 @@ class MunchiesSerializer
   end
 
   def to_json
+    # binding.pry
     {
       data: {
         id: nil,

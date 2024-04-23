@@ -11,6 +11,7 @@ class LocationService
     end
 
     def self.coordinates(location)
+        
         data = get_url("v1/address?location=#{location}")
         data[:results].first[:locations].first[:latLng]
     end

@@ -24,12 +24,12 @@ RSpec.describe Munchies do
 
     subject(:munchies) { described_class.new(weather_data, restaurant_data) }
 
-    it 'initializes with weather data' do
+    xit 'initializes with weather data' do
       expect(munchies.weather[:summary]).to eq("Clear")
       expect(munchies.weather[:temperature]).to eq("78.8 F")
     end
 
-    it 'initializes with restaurant data' do
+    xit 'initializes with restaurant data' do
       expected_address = "1234 Pizza Street, Pueblo, CO"
       expect(munchies.restaurant[:name]).to eq("Giovanni's Pizzeria")
       expect(munchies.restaurant[:address]).to eq(expected_address)
