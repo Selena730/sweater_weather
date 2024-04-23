@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v3/businesses/search?categories=italian&limit=1&location=pueblo,co&sort_by=rating
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Authorization:
+      - Bearer TEm42v1tvvc2RVfWmzgzk2cDcVWD8bMoQPweCIcdy86LrdDtxvV19B5kD1mJWnkDaPol_smH_bmUbi1P6TiQQmxfYSGRfFiGtM79U5LWkwVSTYnvVYMcltPaXeImZnYx
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Tracing-Auth:
+      - HkQpsqOHXXpftzLT_q-JFPvfJAtiKS4agccvfYt1bm0
+      Ratelimit-Resettime:
+      - '2024-04-24T00:00:00+00:00'
+      X-Zipkin-Id:
+      - e03e1516396d69c5
+      X-Routing-Service:
+      - routing-main--useast1-59868f95f7-h4m8c; site=public_api_v3
+      X-B3-Sampled:
+      - '0'
+      Ratelimit-Remaining:
+      - '286'
+      Server:
+      - envoy
+      Ratelimit-Dailylimit:
+      - '300'
+      X-Mode:
+      - ro
+      X-Proxied:
+      - 10-65-110-174-useast1aprod
+      X-Extlb:
+      - 10-65-110-174-useast1aprod
+      Cache-Control:
+      - max-age=0, no-store, private, no-transform
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 23 Apr 2024 17:42:18 GMT
+      Via:
+      - 1.1 varnish
+      X-Served-By:
+      - cache-den8241-DEN
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      Vary:
+      - Accept-Encoding
+      Alt-Svc:
+      - h3=":443";ma=86400,h3-29=":443";ma=86400,h3-27=":443";ma=86400
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"businesses": [{"id": "OFX_AW60mL82nnyfyoRvqA", "alias": "pasta-cottage-pueblo",
+        "name": "Pasta Cottage", "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/-U3W1BXJcmCaHjDkO_1o1Q/o.jpg",
+        "is_closed": false, "url": "https://www.yelp.com/biz/pasta-cottage-pueblo?adjust_creative=3aoW3qHEj8Q1di8P5LdVcw&utm_campaign=yelp_api_v3&utm_medium=api_v3_business_search&utm_source=3aoW3qHEj8Q1di8P5LdVcw",
+        "review_count": 11, "categories": [{"alias": "italian", "title": "Italian"},
+        {"alias": "chicken_wings", "title": "Chicken Wings"}], "rating": 5.0, "coordinates":
+        {"latitude": 38.23984, "longitude": -104.61524}, "transactions": ["delivery"],
+        "price": "$", "location": {"address1": "1525 E Evans Ave", "address2": "",
+        "address3": "", "city": "Pueblo", "zip_code": "81004", "country": "US", "state":
+        "CO", "display_address": ["1525 E Evans Ave", "Pueblo, CO 81004"]}, "phone":
+        "+17195640095", "display_phone": "(719) 564-0095", "distance": 4986.661469303835,
+        "attributes": {"business_temp_closed": null, "menu_url": null, "open24_hours":
+        null, "waitlist_reservation": null}}], "total": 20, "region": {"center": {"longitude":
+        -104.5733642578125, "latitude": 38.27035217485165}}}'
+  recorded_at: Tue, 23 Apr 2024 17:42:18 GMT
+recorded_with: VCR 6.2.0
