@@ -26,27 +26,39 @@ RSpec.describe LocationService, type: :service do
 
   describe '.get_route' do
     it 'returns the formatted time if route is found' do
+      origin = 'Denver, CO'
+      destination = 'Boulder, CO'
       successful_response = {
         info: { statuscode: 0 },
         route: { formattedTime: '02:30:00' }
       }
-      allow(LocationService).to receive(:get_url).and_return(successful_response)
+      allow(LocationService).to receive(:conn).and_return(Faraday.new(url: 'https://www.mapquestapi.com'))
 
-      result = LocationService.get_route('Denver, CO', 'Boulder, CO')
+      stub_request(:get, "https://www.mapquestapi.com/directions/v2/route?from=#{origin}&to=#{destination}")
+        .to_return(status: 200, body: successful_response.to_json, headers: { 'Content-Type' => 'application/json' })
 
-      expect(result[:route][:formattedTime]).to eq('02:30:00')
+      result = LocationService.get_route(origin, destination)
+
+      expect(result).to eq('02:30:00')
+      expect(WebMock).to have_requested(:get, "https://www.mapquestapi.com/directions/v2/route?from=#{origin}&to=#{destination}")
     end
 
-    it 'returns if route is not found' do
+    it 'returns "impossible route" if route is not found' do
+      origin = 'New York, NY'
+      destination = 'London, UK'
       failed_response = {
-        info: { statuscode: 1 },  
+        info: { statuscode: 1 },
         route: {}
       }
-      allow(LocationService).to receive(:get_url).and_return(failed_response)
-  
-      result = LocationService.get_route('New York, NY', 'London, UK')  
-  
-      expect(result[:route][:formattedTime]).to be_nil
+      allow(LocationService).to receive(:conn).and_return(Faraday.new(url: 'https://www.mapquestapi.com'))
+
+      stub_request(:get, "https://www.mapquestapi.com/directions/v2/route?from=#{origin}&to=#{destination}")
+        .to_return(status: 200, body: failed_response.to_json, headers: { 'Content-Type' => 'application/json' })
+
+      result = LocationService.get_route(origin, destination)
+
+      expect(result).to eq('impossible route')
+      expect(WebMock).to have_requested(:get, "https://www.mapquestapi.com/directions/v2/route?from=#{origin}&to=#{destination}")
     end
   end
 end

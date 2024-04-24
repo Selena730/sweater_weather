@@ -3,14 +3,14 @@ require 'rails_helper'
 RSpec.describe RoadTrip do
   describe 'initialize' do
     it 'initializes a RoadTrip object with correct attributes' do
-      weather_info = OpenStruct.new(temperature: 44.2, conditions: 'Cloudy with a chance of meatballs')
+      weather_info = { temperature: 44.2, conditions: 'Cloudy with a chance of meatballs' }
       directions_info = { route: { formattedTime: '04:40:45' } }
 
       road_trip = RoadTrip.new(
-        'New York, NY',           
-        'Los Angeles, CA',       
-        weather_info,            
-        directions_info           
+        'New York, NY',
+        'Los Angeles, CA',
+        weather_info,
+        directions_info
       )
 
       expect(road_trip.start_city).to eq('New York, NY')

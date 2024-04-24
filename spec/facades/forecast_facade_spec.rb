@@ -1,24 +1,34 @@
 require 'rails_helper'
 
-RSpec.describe ForecastFacade, type: :facade do
-  describe '.forecast' do
-        it 'returns formatted forecast data when given a valid location', :vcr do
-            location = 'Denver, CO'
-            forecast = ForecastFacade.forecast(location)
+RSpec.describe RoadTripFacade do
+  describe '.create_road_trip' do
+    let(:origin) { 'Denver, CO' }
+    let(:destination) { 'Boulder, CO' }
+    let(:travel_time) { '00:45:23' }
+    let(:weather_data) do
+      {
+        forecast: [
+          { date: '2024-04-25', day: { avgtemp_f: 60, condition: { text: 'Partly cloudy' } } },
+          { date: '2024-04-26', day: { avgtemp_f: 65, condition: { text: 'Sunny' } } }
+        ]
+      }
+    end
 
-            expect(forecast).to be_a(Forecast)
-            expect(forecast.id).to be_nil
-            expect(forecast.current_weather).to include(:last_updated, :temperature, :feels_like, :humidity, :uvi, :visibility, :condition, :icon)
-            expect(forecast.daily_weather).to be_an(Array)
-            expect(forecast.daily_weather.first).to include(:date, :sunrise, :sunset, :max_temp, :min_temp, :condition, :icon)
-            expect(forecast.hourly_weather).to be_an(Array)
-            expect(forecast.hourly_weather.first).to include(:time, :temperature, :conditions, :icon)
-        end
-        
-        it 'raises an error' do
-            location = 'Invalid Location'
+    before do
+      allow(LocationService).to receive(:get_route).with(origin, destination).and_return(travel_time)
+      allow(WeatherService).to receive(:fetch_weather).and_return(weather_data)
 
-            expect { ForecastFacade.forecast(location) }.to raise_error(StandardError)
-        end
+    end
+
+    it 'creates a RoadTrip with the correct data' do
+      VCR.use_cassette('location_service/coordinates') do
+        road_trip = RoadTripFacade.create_road_trip(origin, destination)
+
+        expect(road_trip.start_city).to eq(origin)
+        expect(road_trip.end_city).to eq(destination)
+        expect(road_trip.travel_time).to eq('00 hours, 45 minutes')
+        expect(road_trip.weather_at_eta).to eq({ temperature: 60, condition: 'Partly cloudy' })
+      end
+    end
   end
 end

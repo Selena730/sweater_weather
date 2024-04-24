@@ -17,13 +17,14 @@ class LocationService
 
     def self.get_route(origin, destination)
         url = "/directions/v2/route?from=#{origin}&to=#{destination}"
-        response = get_url(url)
-        return { route: { formattedTime: nil } } unless response[:info][:statuscode] == 0
+        response = conn.get(url)
+        return "impossible route" unless response.success?
     
-        {
-          route: {
-            formattedTime: response[:route][:formattedTime]
-          }
-        }
+        route_data = JSON.parse(response.body, symbolize_names: true)
+        if route_data[:info][:statuscode] == 0
+          route_data[:route][:formattedTime] 
+        else
+          "impossible route"
+        end
     end
 end

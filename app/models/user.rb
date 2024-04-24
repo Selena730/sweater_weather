@@ -3,9 +3,9 @@ class User < ApplicationRecord
     validates :email, presence: true, uniqueness: true
     before_create :generate_api_key #callback .. only before creation. So only for new objects (create action)
 
-  private
+  
 
-  def generate_api_key
-    self.api_key = SecureRandom.hex(13) 
+    def generate_api_key
+      self.api_key = SecureRandom.hex(13) 
+    end
   end
-end

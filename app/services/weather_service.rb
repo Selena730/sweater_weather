@@ -12,20 +12,13 @@ class WeatherService
     end
   
     def self.fetch_weather(coordinates)
+        # binding.pry
+      coordinates = "#{coordinates[:lat]},#{coordinates[:lng]}"  if coordinates.class == Hash #guard claws
       data = get_url("v1/forecast.json?q=#{coordinates}&days=6")
-      
+
       { 
         current: data[:current], 
         forecast: data[:forecast][:forecastday] 
       }
-    end
-
-    def self.fetch_weather_at_eta(coordinates, travel_time)
-        weather = fetch_weather(coordinates)
-        {
-            datetime: Time.now.strftime("%Y-%m-%d %H:%M"),
-            temperature: weather[:current][:temp_c],
-            condition: weather[:current][:condition][:text]
-        }
     end
 end
