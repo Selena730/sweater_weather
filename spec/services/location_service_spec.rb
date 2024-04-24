@@ -23,4 +23,30 @@ RSpec.describe LocationService, type: :service do
         .with(query: { "key" => Rails.application.credentials.mapquest[:key], "location" => location })
     end
   end
+
+  describe '.get_route' do
+    it 'returns the formatted time if route is found' do
+      successful_response = {
+        info: { statuscode: 0 },
+        route: { formattedTime: '02:30:00' }
+      }
+      allow(LocationService).to receive(:get_url).and_return(successful_response)
+
+      result = LocationService.get_route('Denver, CO', 'Boulder, CO')
+
+      expect(result[:route][:formattedTime]).to eq('02:30:00')
+    end
+
+    it 'returns if route is not found' do
+      failed_response = {
+        info: { statuscode: 1 },  
+        route: {}
+      }
+      allow(LocationService).to receive(:get_url).and_return(failed_response)
+  
+      result = LocationService.get_route('New York, NY', 'London, UK')  
+  
+      expect(result[:route][:formattedTime]).to be_nil
+    end
+  end
 end

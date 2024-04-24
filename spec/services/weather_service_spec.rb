@@ -23,4 +23,26 @@ RSpec.describe WeatherService, type: :service do
       end
     end
   end
+
+  describe '.fetch_weather_at_eta' do
+    it 'returns weather data at ETA based on provided coordinates and travel time' do
+      weather_response = {
+        current: {
+          temp_c: 22.5,
+          condition: { text: "Partly cloudy" }
+        }
+      }
+      
+      allow(WeatherService).to receive(:fetch_weather).and_return(weather_response)
+
+      coordinates = "39.7392,-104.9903"  
+      travel_time = "02:30:00"            
+
+      result = WeatherService.fetch_weather_at_eta(coordinates, travel_time)
+
+      expect(result[:datetime]).to eq(Time.now.strftime("%Y-%m-%d %H:%M"))
+      expect(result[:temperature]).to eq(22.5)
+      expect(result[:condition]).to eq("Partly cloudy")
+    end
+  end
 end

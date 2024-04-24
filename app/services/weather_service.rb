@@ -19,4 +19,13 @@ class WeatherService
         forecast: data[:forecast][:forecastday] 
       }
     end
+
+    def self.fetch_weather_at_eta(coordinates, travel_time)
+        weather = fetch_weather(coordinates)
+        {
+            datetime: Time.now.strftime("%Y-%m-%d %H:%M"),
+            temperature: weather[:current][:temp_c],
+            condition: weather[:current][:condition][:text]
+        }
+    end
 end

@@ -14,4 +14,16 @@ class LocationService
         data = get_url("v1/address?location=#{location}")
         data[:results].first[:locations].first[:latLng]
     end
+
+    def self.get_route(origin, destination)
+        url = "/directions/v2/route?from=#{origin}&to=#{destination}"
+        response = get_url(url)
+        return { route: { formattedTime: nil } } unless response[:info][:statuscode] == 0
+    
+        {
+          route: {
+            formattedTime: response[:route][:formattedTime]
+          }
+        }
+    end
 end
